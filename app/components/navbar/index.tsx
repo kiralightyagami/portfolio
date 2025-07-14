@@ -47,7 +47,7 @@ export const Navbar = () => {
         }}
         transition={{
             duration: 0.3,
-            ease: "easeInOut",
+            ease: "linear",
         }}
            className="rounded-full fixed top-0 inset-x-0 flex max-w-4xl mx-auto items-center justify-between py-2 px-3">
             <Image className="h-10 w-10 rounded-full" src="/avatar.png" alt="avatar" width={100} height={100} />
