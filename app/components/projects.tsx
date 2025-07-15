@@ -52,7 +52,7 @@ export const Projects = () => {
                     alt={project.title} 
                     width={300} 
                     height={300}
-                    className="w-full h-58 rounded-xl object-cover group-hover:scale-[1.02] transition duration-200"
+                    className=" w-full h-58 rounded-xl object-cover group-hover:scale-[1.02] transition duration-200"
                     />
                     <h2 className="z-20 mt-2 font-medium tracking-tight text-neutral-500 dark:text-neutral-400 ">
                         {project.title}
