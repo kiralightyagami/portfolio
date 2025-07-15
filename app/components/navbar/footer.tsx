@@ -4,7 +4,7 @@ import { IconBrandGithub, IconBrandX } from "@tabler/icons-react";
 import { Container } from "../container";
 
 export const Footer = () => {
-    return <Container className="flex justify-between border-t border-neutral-100 dark:border-neutral-800 p-3">
+    return <Container className="flex justify-between border-t border-neutral-100 dark:border-neutral-800 py-3 px-6">
         <p className="text-xs text-neutral-500">
             Built with ❤️ by Asvin Shrivas
         </p>

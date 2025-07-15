@@ -65,6 +65,10 @@ export const Timeline = () => {
                 <div key={content.title} className='pl-4'>
                     <Step isInView={isInView} idx={ix}  >
                     <motion.h3
+                    initial={{
+                        opacity: 0,
+                        y: -10,
+                    }}
                     animate={{
                         opacity: isInView ? 1 : 0,
                         y: isInView ? 0 : -10,
@@ -77,6 +81,10 @@ export const Timeline = () => {
                     </Step>
                     {content.description && 
                     <motion.p 
+                    initial={{
+                        opacity: 0,
+                        y: -10,
+                    }}
                     animate={{
                         opacity: isInView ? 1 : 0,
                         y: isInView ? 0 : -10,
@@ -105,6 +113,10 @@ const Step = ({ children, className, isInView, idx}: {children: React.ReactNode,
      
     return (
         <motion.div 
+        initial={{
+            opacity: 0,
+            y: -10,
+        }}
         animate={{
             opacity: isInView ? 1 : 0,
             y: isInView ? 0 : -10,
