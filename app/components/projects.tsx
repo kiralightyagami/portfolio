@@ -10,7 +10,7 @@ export const Projects = ({projects = defaultProjects}: {projects?: Project[]}) =
     
     
     return (
-        <div className="py-10">
+        <div className="py-10 ">
         <SectionHeading delay={0.2}>
             A few of my projects.
         </SectionHeading>

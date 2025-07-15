@@ -3,11 +3,13 @@ import { Projects as ProjectsComponent } from "../components/projects";
 import { Heading } from "../components/heading";
 import { Subheading } from "../components/subheading";
 import { projects } from "../constants/project";
+import { Scales } from "../components/scales";
 
 export default function Projects() {
   return (
     <div className="flex min-h-screen items-start justify-start">
-      <Container className="min-h-screen px-10 md:pt-20 md:pb-10">
+      <Container className="min-h-screen px-12 md:pt-20 md:pb-10">
+        <Scales />
         <Heading as="h1">
           Projects
         </Heading>
