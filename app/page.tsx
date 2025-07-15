@@ -2,6 +2,7 @@ import { Container } from "./components/container";
 import { Projects } from "./components/projects";
 import { Heading } from "./components/heading";
 import { Subheading } from "./components/subheading";
+import { projects } from "./constants/project";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         <Subheading>
           I am a software engineer with a passion for building web applications.
         </Subheading>
-        <Projects />
+        <Projects projects={projects.slice(0, 3)} />
       </Container>
     </div>
   );

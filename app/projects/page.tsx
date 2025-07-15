@@ -2,6 +2,7 @@ import { Container } from "../components/container";
 import { Projects as ProjectsComponent } from "../components/projects";
 import { Heading } from "../components/heading";
 import { Subheading } from "../components/subheading";
+import { projects } from "../constants/project";
 
 export default function Projects() {
   return (
@@ -16,7 +17,7 @@ export default function Projects() {
           pixel-perfect experiences using modern technologies like React,
           TypeScript, and Solana blockchain.
         </Subheading>
-        <ProjectsComponent />
+        <ProjectsComponent projects={projects} />
       </Container>
     </div>
   );

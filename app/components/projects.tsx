@@ -3,38 +3,18 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import Link from "next/link";
+import { Project,   projects as defaultProjects } from "../constants/project";
+import { SectionHeading } from "./section-heading";
 
-export const Projects = () => {
-    const projects = [
-
-
-        {
-            title: "Pixel Pilot",
-                src: "/pixel-pilot.png",
-            href: "#",
-            description: "Pixel Pilot is a cutting-edge platform that transforms text prompts into stunning mathematical animations using Manim"
-        },
-        {
-            title: "AeroFlux",
-            src: "/aeroflux.png",
-            href: "#",
-            description: "A powerful suite of Solana tools - AeroFlux provides an intuitive and streamlined interface for interacting with the Solana blockchain."
-        },
-        {
-            title: "Solana-mpc-tss",
-            src: "/solana-mpc-tss.png",
-            href: "#",
-            description: "A comprehensive TypeScript library for Solana Multi-Party Computation (MPC) and Threshold Signature Schemes (TSS)"
-        },
-        
-    ]
+export const Projects = ({projects = defaultProjects}: {projects?: Project[]}) => {
+    
     
     return (
         <div className="py-10">
-        <p className="text-secondary text-sm md:text-sm pt-4 max-w-lg">
-            I love to build web application and projects that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
+        <SectionHeading delay={0.2}>
+            A few of my projects.
+        </SectionHeading>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
             {projects.map((project, idx) => (
                 <motion.div 
                 initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
@@ -52,7 +32,7 @@ export const Projects = () => {
                     alt={project.title} 
                     width={300} 
                     height={300}
-                    className=" w-full h-58 rounded-xl object-cover group-hover:scale-[1.02] transition duration-200"
+                    className=" w-full h-34 rounded-xl object-cover group-hover:scale-[1.02] transition duration-200"
                     />
                     <h2 className="z-20 mt-2 font-medium tracking-tight text-neutral-500 dark:text-neutral-400 ">
                         {project.title}
