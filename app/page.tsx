@@ -5,6 +5,9 @@ import { Subheading } from "./components/subheading";
 import { projects } from "./constants/project";
 import { Testimonials } from "./components/testimonials";
 import { Scales } from "./components/scales";
+import { ContactForm } from "./components/contact-form";
+import { SectionHeading } from "./components/section-heading";
+import { Skills } from "./components/skills";
 export default function Home() {
   return (
     <div className="min-h-screen flex items-start justify-start">
@@ -16,8 +19,11 @@ export default function Home() {
         <Subheading>
           I am a software engineer with a passion for building web applications.
         </Subheading>
+        <Skills />
         <Projects projects={projects.slice(0, 3)} />
         <Testimonials />  
+        <SectionHeading>Contact Me</SectionHeading>
+        <ContactForm />
       </Container>
     </div>
   );
