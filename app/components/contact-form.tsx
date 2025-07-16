@@ -13,13 +13,33 @@ export const ContactForm = () => {
       return;
     }
 
-    //need to add a backend to handle the form data
-    const APICALL = await fetch("/api/contact", {
-      method: "POST",
-      body: JSON.stringify({ name, email, message }),
-    });
-    if (APICALL.ok) {
-      toast.success("Form submitted");
+    // Create FormData to handle form submissions
+    const submitData = new FormData();
+    submitData.append("name", name);
+    submitData.append("email", email);
+    submitData.append("message", message);
+
+    try {
+      const APICALL = await fetch("/api/contact", {
+        method: "POST",
+        body: submitData,
+      });
+      
+      const response = await APICALL.json();
+      
+      if (APICALL.ok) {
+        toast.success(response.message || "Form submitted successfully!");
+        
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        toast.error(response.error || "Failed to submit form");
+      }
+    } catch (error) {
+      toast.error("Something went wrong. Please try again.");
     }
   };
 
