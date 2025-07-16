@@ -29,7 +29,7 @@ export const Projects = ({projects = defaultProjects}: {projects?: Project[]}) =
                     ease: "easeInOut"
                 }}
                 key={project.title}
-                className="group relative mb-4 rounded-2xl realtive "
+                className="group relative mb-4  rounded-2xl realtive "
                 >
                     <Link href={project.href}>
                         <Image src={project.src} 
@@ -38,18 +38,23 @@ export const Projects = ({projects = defaultProjects}: {projects?: Project[]}) =
                         height={300}
                         className=" w-full h-34 rounded-xl object-cover group-hover:scale-[1.02] transition duration-200"
                         />
-                        <h2 className="p-2 z-20 mt-2 font-medium tracking-tight text-neutral-500 dark:text-neutral-400 ">
+                        <div className="flex flex-1 flex-col justify-between py-4 transition-all duration-300 group-hover:px-4">
+                        <div>
+                        <h2 className="z-20 mt-2 font-medium tracking-tight text-neutral-700 dark:text-neutral-200 ">
                             {project.title}
                         </h2>
-                        <p className="p-2 max-w-sm text-sm text-neutral-500 dark:text-neutral-400">
+                        <p className=" mt-2 max-w-[17rem] text-sm text-neutral-500 dark:text-neutral-400">
                             {project.description}
                         </p>
-                    </Link>
-                    <div className="flex flex-wrap -space-x-1 p-2">
+                        </div>
+                        <div className="mt-2 flex max-w[14rem] flex-wrap gap-1">
                         {project.stack.map((stack) => (
-                            <StackItem key={stack} technology={stack} />
+                            <StackItem key={stack} technology={stack} className="-mr-3 hover:z-10"/>
                         ))}
                     </div>
+                    </div>
+                    </Link>
+                    
                 </motion.div>
             ))}
         </div>
