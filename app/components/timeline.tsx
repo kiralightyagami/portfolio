@@ -59,7 +59,7 @@ export const Timeline = () => {
                 ease: "easeInOut",
                 delay: ix * 0.1,
             }}
-            className='font-bold text-black rounded-md shadow-input w-fit px-2 py-0.5 mb-2'>{individualYear.year}</motion.h2>
+            className='font-bold text-black dark:text-white rounded-md shadow-input w-fit px-2 py-0.5 mb-2 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700'>{individualYear.year}</motion.h2>
             <div className="flex flex-col gap-4">
             {individualYear.content.map((content, ix) => (
                 <div key={content.title} className='pl-4'>
@@ -77,7 +77,7 @@ export const Timeline = () => {
                         duration: 0.3,
                         ease: "easeInOut",
                         delay: 0.2 * ix,
-                    }} className='text-neutral-600'>{content.title}</motion.h3>
+                    }} className='text-neutral-600 dark:text-neutral-300'>{content.title}</motion.h3>
                     </Step>
                     {content.description && 
                     <motion.p 
@@ -94,7 +94,7 @@ export const Timeline = () => {
                         ease: "easeInOut",
                         delay: 0.3 * ix,
                     }}
-                    className='text-neutral-400 pt-1 pl-4 text-sm'>
+                    className='text-neutral-400 dark:text-neutral-400 pt-1 pl-4 text-sm'>
                         {content.description}
                         </motion.p>}
                     
@@ -127,7 +127,7 @@ const Step = ({ children, className, isInView, idx}: {children: React.ReactNode,
             delay: 0.2 * idx,
         }}
         className={`flex items-start gap-2 ${className}`}>
-            <IconCircleCheckFilled className='h-4 w-4 mt-1 text-neutral-500' />
+            <IconCircleCheckFilled className='h-4 w-4 mt-1 text-neutral-500 dark:text-neutral-400' />
             {children}
         </motion.div>
     )

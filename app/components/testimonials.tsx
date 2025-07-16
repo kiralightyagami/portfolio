@@ -46,11 +46,11 @@ export const Testimonials = () => {
 
 const TestimonialCard = ({quote, name, avatar}: {quote: string, name: string, avatar: string}) => {
   return (
-    <div className='hover:shadow-md transition duration-300 mx-4 p-4 rounded-xl flex justify-between flex-col max-w-60 h-50 w-full gap-4 shadow-input'>
-      <p className='text-sm text-neutral-700'>{quote}</p>
+    <div className='hover:shadow-md hover:dark:[box-shadow:var(--shadow-section)] hover:dark:bg-neutral-900 hover:dark:border-neutral-600 hover:dark:scale-[1.02] transition-all duration-500 ease-out mx-4 p-6 rounded-xl flex justify-between flex-col max-w-60 h-50 w-full gap-4 shadow-input bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700'>
+      <p className='text-sm text-neutral-700 dark:text-neutral-300'>{quote}</p>
       <div className='flex items-center gap-4 w-40'>
         <img src={avatar} alt={name} className='object-cover size-4 rounded-full' />
-        <p className='text-sm text-neutral-500'>{name}</p>
+        <p className='text-sm text-neutral-500 dark:text-neutral-400'>{name}</p>
       </div>
     </div>
     

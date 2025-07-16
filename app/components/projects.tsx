@@ -21,29 +21,37 @@ export const Projects = ({projects = defaultProjects}: {projects?: Project[]}) =
                 initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
                 whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
                 whileHover={{ 
-                    boxShadow: "var(--shadow-input)"
+                    boxShadow: "var(--shadow-input)",
+                    y: -4
                 }}
                 transition={{ 
                     duration: 0.3, 
-                    delay: idx * 0.1,
-                    ease: "easeInOut"
+                    ease: [0.25, 0.46, 0.45, 0.94]
                 }}
                 key={project.title}
-                className="group relative mb-4  rounded-2xl realtive "
+                className="group relative mb-4 rounded-2xl realtive "
                 >
                     <Link href={project.href}>
                         <Image src={project.src} 
                         alt={project.title} 
                         width={300} 
                         height={300}
-                        className=" w-full h-34 rounded-xl object-cover group-hover:scale-[1.02] transition duration-200"
+                        className=" w-full h-34 rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
                         />
-                        <div className="flex flex-1 flex-col justify-between py-4 transition-all duration-300 group-hover:px-4">
+                        <motion.div 
+                        className="flex flex-1 flex-col justify-between py-4"
+                        initial={{ paddingLeft: "0px", paddingRight: "0px" }}
+                        whileHover={{ paddingLeft: "16px", paddingRight: "16px" }}
+                        transition={{ 
+                            duration: 0.5, 
+                            ease: [0.25, 0.46, 0.45, 0.94]
+                        }}
+                        >
                         <div>
-                        <h2 className="z-20 mt-2 font-medium tracking-tight text-neutral-700 dark:text-neutral-200 ">
+                        <h2 className="z-20 mt-2 font-medium tracking-tight text-neutral-700 dark:text-neutral-200 transition-colors duration-300 ease-out group-hover:text-neutral-900 dark:group-hover:text-white">
                             {project.title}
                         </h2>
-                        <p className=" mt-2 max-w-[17rem] text-sm text-neutral-500 dark:text-neutral-400">
+                        <p className="mt-2 max-w-[17rem] text-sm text-neutral-500 dark:text-neutral-400 transition-colors duration-300 ease-out">
                             {project.description}
                         </p>
                         </div>
@@ -52,7 +60,7 @@ export const Projects = ({projects = defaultProjects}: {projects?: Project[]}) =
                             <StackItem key={stack} technology={stack} className="-mr-3 hover:z-10"/>
                         ))}
                     </div>
-                    </div>
+                    </motion.div>
                     </Link>
                     
                 </motion.div>

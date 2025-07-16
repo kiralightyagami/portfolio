@@ -34,10 +34,10 @@ export const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-5 py-10 max-w-lg mx-auto">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-6 py-10 max-w-lg mx-auto">
       <div className="flex flex-col gap-2">
         <label
-          className="text-sm font-medium tracking-tight text-neutral-600"
+          className="text-sm font-medium tracking-tight text-neutral-600 dark:text-neutral-300"
           htmlFor="name"
         >
           Full Name
@@ -46,14 +46,14 @@ export const ContactForm = () => {
           id="name"
           name="name"
           onChange={handleChange}
-          className="focus:outline-none focus:ring-2 focus:ring-2 shadow-input rounded-md px-2 py-1 text-sm"
+          className="focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white shadow-input rounded-md px-3 py-2 text-sm bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-300 placeholder:text-neutral-500 dark:placeholder:text-neutral-500"
           type="text"
           placeholder="John Doe"
         />
       </div>
       <div className="flex flex-col gap-2">
         <label
-          className="text-sm font-medium tracking-tight text-neutral-600"
+          className="text-sm font-medium tracking-tight text-neutral-600 dark:text-neutral-300"
           htmlFor="email"
         >
           Email
@@ -62,14 +62,14 @@ export const ContactForm = () => {
           id="email"
           name="email"
           onChange={handleChange}
-          className="focus:outline-none focus:ring-2 focus:ring-2 shadow-input rounded-md px-2 py-1 text-sm"
-          type="text"
+          className="focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white shadow-input rounded-md px-3 py-2 text-sm bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-300 placeholder:text-neutral-500 dark:placeholder:text-neutral-500"
+          type="email"
           placeholder="john.doe@example.com"
         />
       </div>
       <div className="flex flex-col gap-2">
         <label
-          className="text-sm font-medium tracking-tight text-neutral-600"
+          className="text-sm font-medium tracking-tight text-neutral-600 dark:text-neutral-300"
           htmlFor="message"
         >
           Message
@@ -78,15 +78,15 @@ export const ContactForm = () => {
           id="message"
           name="message"
           onChange={handleChange}
-          className="focus:outline-none focus:ring-2 focus:ring-2 shadow-input resize-none rounded-md px-2 py-1 text-sm"
+          className="focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white shadow-input resize-none rounded-md px-3 py-2 text-sm bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-300 placeholder:text-neutral-500 dark:placeholder:text-neutral-500 min-h-[120px]"
           placeholder="I'm interested in your services..."
         />
       </div>
       <button
         type="submit"
-        className="bg-primary text-white px-4 py-2 rounded-md"
+        className="bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-white dark:text-neutral-300 px-4 py-3 rounded-md transition-colors duration-200 font-medium w-full"
       >
-        Submit
+        Send message
       </button>
     </form>
   );

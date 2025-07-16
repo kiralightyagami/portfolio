@@ -11,15 +11,17 @@ export const StackItem = ({technology, className}: {technology: string, classNam
     whileHover="animate"
     whileTap="animate"
     initial="initial"
-    className={cn("flex items-center justify-start rounded-full border border-neutral-200 bg-neutral-100 p-1 text-xs text-neutral-500 dark:border-neutral-700 dark:bg-neutral-800", className)}
+    className={cn("flex items-center justify-start rounded-full border border-neutral-200 bg-neutral-100 p-1 text-xs text-neutral-500 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-400", className)}
     >
         
         <motion.span
         variants={{
-            animate:{ paddingRight: 2 },
+            animate:{ paddingRight: 6 },
         }}
         transition={{
             type: 'spring',
+            stiffness: 300,
+            damping: 30,
         }}    
         
         >
@@ -33,11 +35,11 @@ export const StackItem = ({technology, className}: {technology: string, classNam
         }}
         transition={{ 
             type: 'spring',
-            stiffness: 200,
-            damping: 25,
-            mass: 0.5,
+            stiffness: 300,
+            damping: 30,
+            mass: 0.8,
         }}    
-        className="overflow-hidden whitespace-nowrap text-neutral-500 dark:text-neutral-700"
+        className="overflow-hidden whitespace-nowrap text-neutral-500 dark:text-neutral-400"
         >
             {getTechnologyDisplayName(technology)}
         </motion.span>
