@@ -5,9 +5,9 @@ import { Subheading } from "./components/subheading";
 import { projects } from "./constants/project";
 import { Testimonials } from "./components/testimonials";
 import { Scales } from "./components/scales";
-import { ContactForm } from "./components/contact-form";
 import { SectionHeading } from "./components/section-heading";
 import { Skills } from "./components/skills";
+import { GetInTouch } from "./components/get-in-touch";
 export default function Home() {
   return (
     <div className="min-h-screen flex items-start justify-start">
@@ -22,8 +22,10 @@ export default function Home() {
         <Skills />
         <Projects projects={projects.slice(0, 3)} />
         <Testimonials />  
-        <SectionHeading>Contact Me</SectionHeading>
-        <ContactForm />
+        <SectionHeading>Get in touch</SectionHeading>
+        <div className="mt-2">
+          <GetInTouch/>
+        </div>
       </Container>
     </div>
   );
