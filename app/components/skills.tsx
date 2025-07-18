@@ -91,7 +91,7 @@ const dataRight = [{
 ]
   
     return (
-    <div className='py-10'>
+      <div className='py-10 '>
         <SectionHeading>Skills</SectionHeading>
         <div className="[mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)] flex"> 
         <Marquee speed={20} pauseOnHover={true} className='py-4'>

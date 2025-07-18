@@ -31,7 +31,7 @@ export const Testimonials = () => {
   }]
   
     return (
-    <div className='py-10'>
+      <div className='py-10 '>
         <SectionHeading>People love my work</SectionHeading>
         <div className="[mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)] flex"> 
         <Marquee speed={20} pauseOnHover={true} className='py-4'>

@@ -16,7 +16,7 @@ export default function Home() {
       
       <Container className="min-h-screen px-4 sm:px-6 md:pt-20 md:pb-10 md:px-12">
         <Scales />
-        <Heading as="h1">
+        <Heading as="h1" className="mt-16 md:mt-0">
           Asvin Shrivas
         </Heading>
         <Subheading>

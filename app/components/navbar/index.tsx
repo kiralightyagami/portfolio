@@ -142,6 +142,14 @@ export const Navbar = () => {
             aria-label="Mobile navigation menu"
             className="fixed inset-0 z-50 flex flex-col items-center justify-start pt-20 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md animate-fade-in-slide"
           >
+            {/* X button inside overlay */}
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="absolute top-4 left-1/2 -translate-x-1/2 p-2 z-50 focus:outline-none"
+              aria-label="Close navigation menu"
+            >
+              <XIcon className="h-9 w-9 text-neutral-900 dark:text-white" />
+            </button>
             {navItems.map((item, idx) => (
               <Link
                 className="w-full text-center py-4 text-lg text-neutral-700 dark:text-white border-b border-neutral-200 dark:border-neutral-700 last:border-b-0 focus:bg-neutral-100 dark:focus:bg-neutral-800 outline-none transition-colors duration-200"
