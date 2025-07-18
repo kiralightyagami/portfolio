@@ -8,13 +8,13 @@ import { Scales } from "./components/scales";
 import { SectionHeading } from "./components/section-heading";
 import { Skills } from "./components/skills";
 import { GetInTouch } from "./components/get-in-touch";
-import { MobileWarning } from "./components/mobile-warning";
+
 
 export default function Home() {
   return (
     <div className="min-h-screen flex items-start justify-start">
-      <MobileWarning />
-      <Container className=" min-h-screen px-12 md:pt-20 md:pb-10" > 
+      
+      <Container className="min-h-screen px-4 sm:px-6 md:pt-20 md:pb-10 md:px-12">
         <Scales />
         <Heading as="h1">
           Asvin Shrivas

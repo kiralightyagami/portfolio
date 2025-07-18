@@ -113,7 +113,7 @@ const dataRight = [{
 
 const SkillCard = ({name, avatar}: {name: string, avatar: string}) => {
   return (
-    <div className='hover:shadow-md hover:dark:[box-shadow:var(--shadow-section)] hover:dark:bg-neutral-900 hover:dark:border-neutral-600 hover:dark:scale-[1.02] transition-all duration-500 ease-out mx-auto p-2 rounded-xl flex justify-between flex-col max-w-60 h-auto w-full shadow-input bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700'>
+    <div className='hover:shadow-md hover:dark:[box-shadow:var(--shadow-section)] hover:dark:bg-neutral-900 hover:dark:border-neutral-600 hover:dark:scale-[1.02] transition-all duration-500 ease-out mx-auto p-2 rounded-xl flex justify-between flex-col max-w-xs w-full shadow-input bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 items-center'>
       <div className='flex items-center'>
         <img src={avatar} alt={name} className='object-cover size-4 rounded-full' />
         <p className='ml-1 text-xs text-neutral-500 dark:text-neutral-400'>{name}</p>

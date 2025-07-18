@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "motion/react";
 export const SectionHeading = ({children , delay = 0, className}: {children?: string, delay?: number, className?: string}) => {
     return (
-        <h2 className={` font-normal mt-4 relative max-w-lg w-fit text-sm md:text-sm text-neutral-800 dark:text-white ${className}`}>
+        <h2 className={`font-normal mt-4 relative max-w-lg w-fit text-base md:text-lg text-neutral-800 dark:text-white text-left ${className}`}>
            <Background />
            {children?.split(" ").map((word, idx) => (
                 <motion.span 

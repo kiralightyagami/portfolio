@@ -15,7 +15,7 @@ export const Projects = ({projects = defaultProjects}: {projects?: Project[]}) =
         <SectionHeading delay={0.2}>
             A few of my projects.
         </SectionHeading>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-4">
             {projects.map((project, idx) => (
                 <motion.div 
                 initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
@@ -29,7 +29,7 @@ export const Projects = ({projects = defaultProjects}: {projects?: Project[]}) =
                     ease: [0.25, 0.46, 0.45, 0.94]
                 }}
                 key={project.title}
-                className="group relative mb-4 rounded-2xl realtive "
+                className="group relative mb-4 rounded-2xl realtive w-full max-w-full"
                 >
                     <Link href={project.href}>
                         <Image src={project.src} 
@@ -48,14 +48,14 @@ export const Projects = ({projects = defaultProjects}: {projects?: Project[]}) =
                         }}
                         >
                         <div>
-                        <h2 className="z-20 mt-2 font-medium tracking-tight text-neutral-700 dark:text-neutral-200 transition-colors duration-300 ease-out group-hover:text-neutral-900 dark:group-hover:text-white">
+                        <h2 className="z-20 mt-2 font-medium tracking-tight text-neutral-700 dark:text-neutral-200 transition-colors duration-300 ease-out group-hover:text-neutral-900 dark:group-hover:text-white text-center md:text-left">
                             {project.title}
                         </h2>
-                        <p className="mt-2 max-w-[17rem] text-sm text-neutral-500 dark:text-neutral-400 transition-colors duration-300 ease-out">
+                        <p className="mt-2 max-w-[17rem] text-sm text-neutral-500 dark:text-neutral-400 transition-colors duration-300 ease-out text-center md:text-left mx-auto md:mx-0">
                             {project.description}
                         </p>
                         </div>
-                        <div className="mt-2 flex max-w[14rem] flex-wrap gap-1">
+                        <div className="mt-2 flex max-w[14rem] flex-wrap gap-1 justify-center md:justify-start">
                         {project.stack.map((stack) => (
                             <StackItem key={stack} technology={stack} className="-mr-3 hover:z-10"/>
                         ))}

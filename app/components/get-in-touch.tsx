@@ -14,7 +14,7 @@ export const GetInTouch = () => {
     };
 
     return (
-        <div className="p-12">
+        <div className="p-4 md:p-12">
             <p className="text-neutral-600 dark:text-neutral-300 text-sm mb-2 leading-relaxed">
                 I'm currently looking for new opportunities. Whether you have a 
                 question or want to say hi, hit that button.
@@ -26,17 +26,17 @@ export const GetInTouch = () => {
                 </p>
             </div>
             
-            <div className="relative w-1/2">
+            <div className="relative w-full md:w-1/2 flex flex-col md:flex-row gap-2 md:gap-0">
                 <input
                     type="email"
                     placeholder="Your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white shadow-input rounded-md px-2 py-3 text-xs bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-300 placeholder:text-neutral-500 dark:placeholder:text-neutral-500 pr-32"
+                    className="w-full focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white shadow-input rounded-md px-2 py-3 text-xs bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-300 placeholder:text-neutral-500 dark:placeholder:text-neutral-500 md:pr-32"
                 />
                 <button
                     onClick={handleSendEnquiry}
-                    className="absolute right-1 top-1/2 -translate-y-1/2 bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-white dark:text-neutral-300 px-4 py-2 rounded-md transition-colors duration-200 font-medium text-xs"
+                    className="mt-2 md:mt-0 md:absolute md:right-1 md:top-1/2 md:-translate-y-1/2 bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-white dark:text-neutral-300 px-4 py-2 rounded-md transition-colors duration-200 font-medium text-xs w-full md:w-auto"
                 >
                     Send Enquiry
                 </button>
