@@ -15,7 +15,7 @@ export default function Home() {
     <div className="min-h-screen flex items-start justify-start">
       
       <Container className="min-h-screen px-4 sm:px-6 md:pt-20 md:pb-10 md:px-12">
-        <Scales />
+        <Scales className="hidden md:block" />
         <Heading as="h1" className="mt-16 md:mt-0">
           Asvin Shrivas
         </Heading>

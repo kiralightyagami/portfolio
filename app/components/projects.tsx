@@ -36,7 +36,7 @@ export const Projects = ({projects = defaultProjects}: {projects?: Project[]}) =
                         alt={project.title} 
                         width={300} 
                         height={300}
-                        className=" w-full h-34 rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                        className=" w-full h-40 sm:h-34 rounded-xl object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
                         />
                         <motion.div 
                         className="flex flex-1 flex-col justify-between py-4"
