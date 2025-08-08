@@ -9,6 +9,8 @@ import { SectionHeading } from "./components/section-heading";
 import { Skills } from "./components/skills";
 import { GetInTouch } from "./components/get-in-touch";
 import { ContainerTextFlip } from "./components/container-text-flip";
+import Link from "next/link";
+import {unstable_ViewTransition as ViewTransition} from "react";
 
 
 export default function Home() {
