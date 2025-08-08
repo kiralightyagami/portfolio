@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactIcon, NextIcon, TypeScriptIcon, TailwindIcon, PythonIcon, DockerIcon, GitIcon, SolanaIcon, NodeIcon } from '@/app/icons/stack'
+import { ReactIcon, NextIcon, TypeScriptIcon, TailwindIcon, PythonIcon, DockerIcon, GitIcon, SolanaIcon, NodeIcon, RustIcon, AnchorIcon } from '@/app/icons/stack'
 
 import { IconCode } from '@tabler/icons-react'
 
@@ -14,6 +14,8 @@ export const getLogoForTechnology = (technology: string) => {
         Git: <GitIcon className="h-4 w-4 shrink-0" />,
         Solana: <SolanaIcon className="h-4 w-4 shrink-0" />,
         Nodejs: <NodeIcon className="h-4 w-4 shrink-0" />,
+        Rust: <RustIcon className="h-4 w-4 shrink-0" />,
+        Anchor: <AnchorIcon className="h-4 w-4 shrink-0" />,
     }
     return (
     logoMap[technology] || <IconCode className="h-4 w-4 shrink-0 text-neutral-600 dark:text-neutral-200" />
@@ -31,6 +33,8 @@ export const getTechnologyDisplayName = (technology: string) => {
         Git: "Git",
         Solana: "Solana",
         Tailwind: "Tailwind CSS",
+        Rust: "Rust",
+        Anchor: "Anchor",
     }
     return displayNameMap[technology] || technology
 }

@@ -8,6 +8,7 @@ import { Scales } from "./components/scales";
 import { SectionHeading } from "./components/section-heading";
 import { Skills } from "./components/skills";
 import { GetInTouch } from "./components/get-in-touch";
+import { ContainerTextFlip } from "./components/container-text-flip";
 
 
 export default function Home() {
@@ -16,9 +17,12 @@ export default function Home() {
       
       <Container className="min-h-screen px-12 md:pt-20 md:pb-10">
         <Scales />
-        <Heading as="h1" className="mt-16 md:mt-0">
-          Asvin Shrivas
-        </Heading>
+        <div className="flex flex-col md:flex-row md:items-center gap-2">
+          <Heading as="h1" className="mt-16 md:mt-0">
+            Asvin Shrivas 
+          </Heading>
+        <ContainerTextFlip words={["Full Stack Developer", "Web3 Enthusiast", "DevOps Evangelist", "Freelancer", "Blockchain Developer"]} />
+        </div>
         <Subheading>
           I am a software engineer with a passion for building web applications.
         </Subheading>

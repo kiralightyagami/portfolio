@@ -41,6 +41,12 @@ export const projects: Project[] = [
         href: "https://github.com/kiralightyagami/solana-mpc-tss",
         description: "A comprehensive TypeScript library for Solana Multi-Party Computation (MPC) and Threshold Signature Schemes (TSS)",
         stack: ["Nodejs","TypeScript","Solana"]
+    },{
+        title: "Amm",
+        src: "/AMM.png",
+        href: "https://github.com/kiralightyagami/Amm",
+        description: "Half baked Automatic market maker contract without order book in Anchor",
+        stack: ["Anchor","Rust","Solana"]
     },
     
 ]
