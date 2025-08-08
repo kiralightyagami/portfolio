@@ -15,6 +15,18 @@ export const projects: Project[] = [
         href: "https://github.com/kiralightyagami/pixel-pilot",
         description: "Pixel Pilot is a cutting-edge platform that transforms text prompts into stunning mathematical animations using Manim",
         stack: ["Next","Nodejs","TypeScript"]
+    },{
+        title: "Verse-X",
+        src: "/verse-x.png",
+        href: "https://github.com/kiralightyagami/VerseX",
+        description: "A vibrant 2D virtual universe where users can connect, collaborate, and create extraordinary experiences.",
+        stack: ["Next","Nodejs","TypeScript"]
+    },{
+        title: "resumera",
+        src: "/resumera.png",
+        href: "https://github.com/kiralightyagami/resumera",
+        description: "AI-Powered Resume Analysis & ATS Optimization Platform.",
+        stack: ["Next","Tailwind","TypeScript"]
     },
     {
         title: "AeroFlux",

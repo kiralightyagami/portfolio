@@ -11,7 +11,7 @@ import {
   useTransform,
 } from "motion/react";
 import { DarkModeToggle } from "../dark-mode-toggle";
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { IconMenu2, IconX } from "@tabler/icons-react";
 
 export const Navbar = () => {
   const navItems = [
@@ -38,6 +38,7 @@ export const Navbar = () => {
 
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   // Prevent background scroll when mobile menu is open
   useEffect(() => {
@@ -50,6 +51,28 @@ export const Navbar = () => {
       document.body.style.overflow = '';
     };
   }, [menuOpen]);
+
+  // Track viewport to apply width transforms only on desktop
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+    const updateMatch = () => setIsDesktop(mediaQuery.matches);
+    updateMatch();
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', updateMatch);
+    } else {
+      // Safari fallback
+      // @ts-ignore
+      mediaQuery.addListener(updateMatch);
+    }
+    return () => {
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener('change', updateMatch);
+      } else {
+        // @ts-ignore
+        mediaQuery.removeListener(updateMatch);
+      }
+    };
+  }, []);
 
   const y = useTransform(scrollY, [0, 100], [0, 10]);
   const width = useTransform(scrollY, [0, 100], ["65%", "50%"]);
@@ -70,7 +93,7 @@ export const Navbar = () => {
       <motion.nav
         style={{
           boxShadow: scrolled ? "var(--shadow-input)" : "none",
-          width: width,
+          width: isDesktop ? (width as unknown as string) : "100%",
           y: y,
           borderRadius: borderRadius,
           backdropFilter: backdropBlur,
@@ -79,7 +102,7 @@ export const Navbar = () => {
           duration: 0.3,
           ease: "linear",
         }}
-        className={`fixed inset-x-0 top-0 z-50 mx-auto flex max-w-4xl items-center justify-between px-3 py-2 transition-all duration-300 w-full
+        className={`fixed inset-x-0 top-0 z-50 mx-auto flex max-w-4xl xl:max-w-3xl items-center justify-between px-3 py-2 transition-all duration-300 w-full
         ${scrolled 
           ? 'bg-white/80 dark:bg-neutral-900/80 border border-white/20 dark:border-white/10' 
           : 'bg-transparent border border-transparent'
@@ -128,9 +151,9 @@ export const Navbar = () => {
             }}
           >
             {menuOpen ? (
-              <XIcon className="h-6 w-6 text-neutral-700 dark:text-white" />
+              <IconX className="h-6 w-6 text-neutral-700 dark:text-white" />
             ) : (
-              <MenuIcon className="h-6 w-6 text-neutral-700 dark:text-white" />
+              <IconMenu2 className="h-6 w-6 text-neutral-700 dark:text-white" />
             )}
           </button>
         </div>
@@ -140,31 +163,25 @@ export const Navbar = () => {
             id="mobile-menu"
             role="menu"
             aria-label="Mobile navigation menu"
-            className="fixed inset-0 z-50 flex flex-col items-center justify-start pt-20 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md animate-fade-in-slide"
+            className="absolute left-1/2 top-full z-50 mt-2 w-[95vw] max-w-[22rem] -translate-x-1/2 rounded-md border border-neutral-200 bg-white shadow-lg dark:border-neutral-800 dark:bg-neutral-900"
           >
-            {/* X button inside overlay */}
-            <button
-              onClick={() => setMenuOpen(false)}
-              className="absolute top-4 left-1/2 -translate-x-1/2 p-2 z-50 focus:outline-none"
-              aria-label="Close navigation menu"
-            >
-              <XIcon className="h-9 w-9 text-neutral-900 dark:text-white" />
-            </button>
-            {navItems.map((item, idx) => (
-              <Link
-                className="w-full text-center py-4 text-lg text-neutral-700 dark:text-white border-b border-neutral-200 dark:border-neutral-700 last:border-b-0 focus:bg-neutral-100 dark:focus:bg-neutral-800 outline-none transition-colors duration-200"
-                href={item.href}
-                key={idx}
-                role="menuitem"
-                tabIndex={0}
-                onClick={() => setMenuOpen(false)}
-                onKeyDown={e => {
-                  if (e.key === 'Enter' || e.key === ' ') setMenuOpen(false);
-                }}
-              >
-                {item.label}
-              </Link>
-            ))}
+            <div className="flex flex-col items-start gap-3 p-4">
+              {navItems.map((item, idx) => (
+                <Link
+                  className="w-full rounded-md px-2 py-2 text-sm text-neutral-700 outline-none transition-colors hover:bg-neutral-100 focus:bg-neutral-100 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+                  href={item.href}
+                  key={idx}
+                  role="menuitem"
+                  tabIndex={0}
+                  onClick={() => setMenuOpen(false)}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter' || e.key === ' ') setMenuOpen(false);
+                  }}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
         )}
         <DarkModeToggle />
