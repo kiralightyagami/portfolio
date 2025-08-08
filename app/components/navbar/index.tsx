@@ -12,6 +12,7 @@ import {
 } from "motion/react";
 import { DarkModeToggle } from "../dark-mode-toggle";
 import { IconMenu2, IconX } from "@tabler/icons-react";
+import {unstable_ViewTransition as ViewTransition} from "react";
 
 export const Navbar = () => {
   const navItems = [
@@ -89,6 +90,7 @@ export const Navbar = () => {
     }
   });
   return (
+   
     <Container>
       <motion.nav
         style={{
@@ -102,7 +104,7 @@ export const Navbar = () => {
           duration: 0.3,
           ease: "linear",
         }}
-        className={`fixed inset-x-0 top-0 z-50 mx-auto flex max-w-4xl xl:max-w-3xl items-center justify-between px-3 py-2 transition-all duration-300 w-full
+        className={`fixed inset-x-0 top-0 z-50 mx-auto flex max-w-sm sm:max-w-4xl xl:max-w-3xl items-center justify-between px-3 py-2 transition-all duration-300 w-full
         ${scrolled 
           ? 'bg-white/80 dark:bg-neutral-900/80 border border-white/20 dark:border-white/10' 
           : 'bg-transparent border border-transparent'
@@ -118,6 +120,7 @@ export const Navbar = () => {
           />
         </Link>
         {/* Desktop Nav */}
+        <ViewTransition>  
         <div className="hidden md:flex items-center">
           {navItems.map((item, idx) => (
             <Link
@@ -138,7 +141,7 @@ export const Navbar = () => {
           ))}
         </div>
         {/* Mobile Hamburger */}
-        <div className="md:hidden flex items-center">
+        <div className=" md:hidden flex items-center">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="p-2 focus:outline-none"
@@ -185,7 +188,9 @@ export const Navbar = () => {
           </div>
         )}
         <DarkModeToggle />
+        </ViewTransition>
       </motion.nav>
     </Container>
+    
   );
 };
