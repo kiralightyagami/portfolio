@@ -3,19 +3,32 @@ import { Heading } from "../components/heading";
 import { Subheading } from "../components/subheading";
 import { ContactForm } from "../components/contact-form";
 import { Scales } from "../components/scales";
+import { GetInTouch } from "../components/get-in-touch";
+import Link from "next/link";
+import { IconBrandX } from "@tabler/icons-react";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen flex items-start justify-start">
-      <Container className="min-h-screen px-12 md:pt-20 md:pb-10" > 
+    <div className="flex min-h-screen items-start justify-start">
+      <Container className="min-h-screen px-12 md:pt-20 md:pb-10">
         <Scales />
         <Heading as="h1" className="mt-16 md:mt-0">
           Contact
         </Heading>
         <Subheading>
-          I'm always looking for new opportunities and collaborations. Reach out to me on my socials or send me an email.
+          I'm always looking for new opportunities and collaborations. Reach out
+          to me on my socials or send me an email.
         </Subheading>
-        <ContactForm />
+        <GetInTouch />
+
+        <div className="flex items-center gap-2 p-12">
+          <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            or drop me a message on my socials.
+          </p>
+          <Link href="https://x.com/ShrivasAsvin">
+            <IconBrandX className="size-4 text-neutral-500 hover:text-neutral-700" />
+          </Link>
+        </div>
       </Container>
     </div>
   );

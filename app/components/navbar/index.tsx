@@ -30,7 +30,7 @@ export const Navbar = () => {
     },
     {
       label: "Blog",
-      href: "/blog",
+      href: "https://medium.com/@asvinshrivas332",
     },
   ];
 
@@ -103,7 +103,9 @@ export const Navbar = () => {
         transition={{
           duration: 0.3,
           ease: "linear",
+
         }}
+        
         className={`fixed inset-x-0 top-0 z-50 mx-auto flex max-w-xs xs:max-w-sm sm:max-w-4xl xl:max-w-3xl items-center justify-between px-3 py-2 transition-all duration-300 w-full
         ${scrolled 
           ? 'bg-white/80 dark:bg-neutral-900/80 border border-white/20 dark:border-white/10' 
