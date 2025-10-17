@@ -22,6 +22,24 @@ export const projects: Project[] = [
         description: "A vibrant 2D virtual universe where users can connect, collaborate, and create extraordinary experiences.",
         stack: ["Next","Nodejs","TypeScript"]
     },{
+        title: "Stablecoin",
+        src: "/stablecoin.png",
+        href: "https://github.com/kiralightyagami/Stablecoin",
+        description: "Stablecoin on solana",
+        stack: ["Solana","Anchor","Rust"]
+    },{
+        title: "NFT Marketplace",
+        src: "/nft-marketplace.png",
+        href: "https://github.com/kiralightyagami/NFT-Marketplace",
+        description: "A NFT marketplace built in Rust, a decentralized platform that enables users to mint, buy, sell, and trade unique digital assets (NFTs) on the Solana blockchain.",
+        stack: ["Solana","Anchor","Rust"]
+    },{
+        title: "Solana-mpc-tss",
+        src: "/solana-mpc-tss.png",
+        href: "https://github.com/kiralightyagami/solana-mpc-tss",
+        description: "A comprehensive TypeScript library for Solana Multi-Party Computation (MPC) and Threshold Signature Schemes (TSS)",
+        stack: ["Nodejs","TypeScript","Solana"]
+    },{
         title: "resumera",
         src: "/resumera.png",
         href: "https://github.com/kiralightyagami/resumera",
@@ -36,12 +54,6 @@ export const projects: Project[] = [
         stack: ["Next","Nodejs","TypeScript","Solana"]
     },
     {
-        title: "Solana-mpc-tss",
-        src: "/solana-mpc-tss.png",
-        href: "https://github.com/kiralightyagami/solana-mpc-tss",
-        description: "A comprehensive TypeScript library for Solana Multi-Party Computation (MPC) and Threshold Signature Schemes (TSS)",
-        stack: ["Nodejs","TypeScript","Solana"]
-    },{
         title: "Amm",
         src: "/AMM.png",
         href: "https://github.com/kiralightyagami/Amm",
