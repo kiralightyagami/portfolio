@@ -28,6 +28,12 @@ export const projects: Project[] = [
         description: "Stablecoin on solana",
         stack: ["Solana","Anchor","Rust"]
     },{
+        title: "n7n",
+        src: "/n7n.png",
+        href: "https://github.com/kiralightyagami/n7n",
+        description: "An AI-powered workflow automation platform built with Next.js, enabling users to create visual workflows that connect various services and AI models. Similar to n8n, but with a focus on AI integration.",
+        stack: ["Next","Tailwind","TypeScript"]
+    },{
         title: "NFT Marketplace",
         src: "/nft-marketplace.png",
         href: "https://github.com/kiralightyagami/NFT-Marketplace",
