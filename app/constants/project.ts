@@ -10,11 +10,11 @@ export const projects: Project[] = [
 
 
     {
-        title: "Pixel Pilot",
-        src: "/pixel-pilot.png",
-        href: "https://github.com/kiralightyagami/pixel-pilot",
-        description: "Pixel Pilot is a cutting-edge platform that transforms text prompts into stunning mathematical animations using Manim",
-        stack: ["Next","Nodejs","TypeScript"]
+        title: "n7n",
+        src: "/n7n.png",
+        href: "https://github.com/kiralightyagami/n7n",
+        description: "An AI-powered workflow automation platform built with Next.js, enabling users to create visual workflows that connect various services and AI models. Similar to n8n, but with a focus on AI integration.",
+        stack: ["Next","Tailwind","TypeScript"]    
     },{
         title: "Verse-X",
         src: "/verse-x.png",
@@ -28,11 +28,11 @@ export const projects: Project[] = [
         description: "Stablecoin on solana",
         stack: ["Solana","Anchor","Rust"]
     },{
-        title: "n7n",
-        src: "/n7n.png",
-        href: "https://github.com/kiralightyagami/n7n",
-        description: "An AI-powered workflow automation platform built with Next.js, enabling users to create visual workflows that connect various services and AI models. Similar to n8n, but with a focus on AI integration.",
-        stack: ["Next","Tailwind","TypeScript"]
+        title: "Pixel Pilot",
+        src: "/pixel-pilot.png",
+        href: "https://github.com/kiralightyagami/pixel-pilot",
+        description: "Pixel Pilot is a cutting-edge platform that transforms text prompts into stunning mathematical animations using Manim",
+        stack: ["Next","Nodejs","TypeScript"]
     },{
         title: "NFT Marketplace",
         src: "/nft-marketplace.png",
