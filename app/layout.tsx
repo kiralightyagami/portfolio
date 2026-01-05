@@ -16,6 +16,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "asvin shrivas",
   description: "portfolio",
+  icons: {
+    icon: "/avatar.png",
+  },
 };
 
 export default function RootLayout({

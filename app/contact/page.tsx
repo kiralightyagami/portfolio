@@ -17,7 +17,7 @@ export default function Contact() {
           Contact
         </Heading>
         <Subheading>
-          I'm always looking for new opportunities and collaborations. Reach out
+          I&apos;m always looking for new opportunities and collaborations. Reach out
           to me on my socials or send me an email.
         </Subheading>
         <SectionHeading className="mt-12">Get in touch</SectionHeading>
