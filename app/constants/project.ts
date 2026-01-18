@@ -22,6 +22,12 @@ export const projects: Project[] = [
         description: "A vibrant 2D virtual universe where users can connect, collaborate, and create extraordinary experiences.",
         stack: ["Next","Nodejs","TypeScript"]
     },{
+        title: "Vulnera",
+        src: "/vulnera.png",
+        href: "https://vulnera-iota.vercel.app/",
+        description: "Decentralized Bug Bounty Platform on Solana",
+        stack: ["Solana","Anchor","Rust","Next","Nodejs","TypeScript"]
+    },{
         title: "Stablecoin",
         src: "/stablecoin.png",
         href: "https://github.com/kiralightyagami/Stablecoin",
