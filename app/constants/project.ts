@@ -28,11 +28,11 @@ export const projects: Project[] = [
         description: "Decentralized Bug Bounty Platform on Solana",
         stack: ["Solana","Anchor","Rust","Next","Nodejs","TypeScript"]
     },{
-        title: "Stablecoin",
-        src: "/stablecoin.png",
-        href: "https://github.com/kiralightyagami/Stablecoin",
-        description: "Stablecoin on solana",
-        stack: ["Solana","Anchor","Rust"]
+        title: "Solana-mpc-tss",
+        src: "/solana-mpc-tss.png",
+        href: "https://github.com/kiralightyagami/solana-mpc-tss",
+        description: "A comprehensive TypeScript library for Solana Multi-Party Computation (MPC) and Threshold Signature Schemes (TSS)",
+        stack: ["Nodejs","TypeScript","Solana"]
     },{
         title: "Pixel Pilot",
         src: "/pixel-pilot.png",
@@ -45,12 +45,6 @@ export const projects: Project[] = [
         href: "https://github.com/kiralightyagami/NFT-Marketplace",
         description: "A NFT marketplace built in Rust, a decentralized platform that enables users to mint, buy, sell, and trade unique digital assets (NFTs) on the Solana blockchain.",
         stack: ["Solana","Anchor","Rust"]
-    },{
-        title: "Solana-mpc-tss",
-        src: "/solana-mpc-tss.png",
-        href: "https://github.com/kiralightyagami/solana-mpc-tss",
-        description: "A comprehensive TypeScript library for Solana Multi-Party Computation (MPC) and Threshold Signature Schemes (TSS)",
-        stack: ["Nodejs","TypeScript","Solana"]
     },{
         title: "resumera",
         src: "/resumera.png",
